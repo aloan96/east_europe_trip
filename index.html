@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東歐之耀 ── 小東歐 12 日奢華探險之旅</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="阿聯假期超值小東歐12天深度旅遊行程。探索奧地利、捷克、斯洛伐克、德國核心景點，內附每日詳細行程、各景點500字深度介紹、歷史趣聞與傳說故事、自費預算計算器與打包檢查表。">
+    <meta name="keywords" content="小東歐, 奧地利, 捷克, 斯洛伐克, 德國, 布拉格, 維也納, 布達佩斯, 國王湖, 哈斯達特, 旅遊行程, 歷史傳說">
+    <meta name="author" content="Antigravity Travel Guide">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="東歐之耀 ── 小東歐 12 日奢華探險之旅">
+    <meta property="og:description" content="一鍵探索捷克、奧地利、斯洛伐克與德國，發掘中世紀的宮廷秘史與浪漫傳說。內建實用打包清單與自費計算工具！">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero-header">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-plane-departure"></i> 阿聯酋假期 ── 團號 VIE12EKS260715C</span>
+            <h1 class="hero-title">東歐之耀</h1>
+            <p class="hero-subtitle">12日小東歐奢華探險 ── 奧地利・捷克・斯洛伐克・德國・匈牙利</p>
+            
+            <div class="hero-meta-grid">
+                <div class="meta-item">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <div>
+                        <span class="meta-label">出發日期</span>
+                        <span class="meta-val">2026/07/15</span>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <span class="meta-label">集合時間</span>
+                        <span class="meta-val">20:50 晚上</span>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span class="meta-label">集合地點</span>
+                        <span class="meta-val">桃機 T2 阿聯酋櫃檯(23號)</span>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <div>
+                        <span class="meta-label">專業領隊</span>
+                        <span class="meta-val">郭家晨 小姐 (0920-082-806)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Dashboard -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <button class="nav-btn active" data-target="timeline-section">
+                    <i class="fa-solid fa-route"></i> 每日行程
+                </button>
+                <button class="nav-btn" data-target="attractions-section">
+                    <i class="fa-solid fa-castle"></i> 景點故事庫
+                </button>
+                <button class="nav-btn" data-target="tools-section">
+                    <i class="fa-solid fa-suitcase-rolling"></i> 行程小工具
+                </button>
+                <button class="nav-btn" data-target="emergency-section">
+                    <i class="fa-solid fa-phone-volume"></i> 實用聯絡資訊
+                </button>
+            </div>
+            
+            <!-- Global Search Bar -->
+            <div class="global-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="global-search-input" placeholder="搜尋行程、景點或傳說故事...">
+                <button id="global-clear-btn" class="global-clear-btn">&times;</button>
+                
+                <!-- Search Results Dropdown -->
+                <div class="search-results-dropdown" id="search-results-dropdown">
+                    <!-- Dynamic search results will be injected here -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Containers -->
+    <main class="main-content container">
+
+        <!-- 1. Timeline Section -->
+        <section id="timeline-section" class="tab-panel active">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-compass"></i> 互動式每日行程 timeline</h2>
+                <p>點擊下方天數按鈕，查看每日的行程、三餐、住宿飯店以及推薦的行程重點。</p>
+            </div>
+            
+            <div class="day-selector-wrapper">
+                <div class="day-selector" id="day-selector">
+                    <!-- Day Buttons will be dynamically generated by JS -->
+                </div>
+            </div>
+
+            <div class="day-detail-card card glass" id="day-detail-card">
+                <!-- Day details will be dynamically injected by JS -->
+                <div class="loading-state">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> 載入行程資料中...
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Attractions Section -->
+        <section id="attractions-section" class="tab-panel">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-landmark-dome"></i> 景點與傳說深探</h2>
+                <p>點擊任何景點卡片，開啟高質感視窗閱讀 500 字詳細背景、文化美學與神秘的傳說故事。</p>
+            </div>
+
+            <!-- Country Filters -->
+            <div class="filter-wrapper">
+                <div class="filter-container" id="country-filters">
+                    <button class="filter-btn active" data-filter="all">全部國家</button>
+                    <button class="filter-btn" data-filter="austria">奧地利</button>
+                    <button class="filter-btn" data-filter="czech">捷克</button>
+                    <button class="filter-btn" data-filter="slovakia">斯洛伐克</button>
+                    <button class="filter-btn" data-filter="germany">德國</button>
+                    <button class="filter-btn" data-filter="hungary">匈牙利</button>
+                </div>
+            </div>
+
+            <!-- Attractions Grid -->
+            <div class="attractions-grid" id="attractions-grid">
+                <!-- Cards dynamically loaded by JS -->
+            </div>
+        </section>
+
+        <!-- 3. Tools Section -->
+        <section id="tools-section" class="tab-panel">
+            <div class="tools-grid">
+                
+                <!-- Packing Checklist -->
+                <div class="card glass checklist-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-list-check"></i> 行前打包檢查表</h3>
+                        <p>為您精心整理的打包清單，狀態會自動儲存於瀏覽器，重整不消失！</p>
+                    </div>
+                    
+                    <div class="add-todo-form">
+                        <input type="text" id="new-todo-input" placeholder="新增自訂打包項目...">
+                        <button id="add-todo-btn" class="btn btn-primary"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+
+                    <div class="checklist-groups" id="checklist-groups">
+                        <!-- Checklist categories generated by JS -->
+                    </div>
+                </div>
+
+                <!-- Budget & Self-paid Calculator -->
+                <div class="card glass budget-card">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-coins"></i> 自費活動預算計算機</h3>
+                        <p>行程中自費項目的即時匯率換算器。勾選您想參加的活動，自動結算總預算。</p>
+                    </div>
+                    
+                    <div class="exchange-rate-box">
+                        <span><i class="fa-solid fa-chart-line"></i> 參考匯率 ── <strong>1 歐元 (EUR) ≈ 37 新台幣 (TWD)</strong></span>
+                    </div>
+
+                    <div class="budget-items-list" id="budget-items-list">
+                        <!-- Budget items generated by JS -->
+                    </div>
+
+                    <div class="budget-summary">
+                        <div class="summary-row">
+                            <span>自費活動歐元總額:</span>
+                            <span class="currency-eur" id="total-eur">0 EUR</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>預估新台幣總金額:</span>
+                            <span class="currency-twd" id="total-twd">0 TWD</span>
+                        </div>
+                    </div>
+                    
+                    <div class="alert-box warning-alert">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span><strong>行程小提醒：</strong> 國王湖遊船與鹽礦洞體驗，因排程時間緣故可能只能擇一參加。</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Emergency / Travel Info Section -->
+        <section id="emergency-section" class="tab-panel">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-passport"></i> 駐外代表處與實用資訊</h2>
+                <p>在國外旅行時的重要求助聯絡電話與基本旅遊須知，支援電話一鍵撥號。</p>
+            </div>
+
+            <!-- Travel Quick Facts -->
+            <div class="quick-facts-grid">
+                <div class="fact-card card glass">
+                    <i class="fa-solid fa-plug"></i>
+                    <h4>電壓與插座</h4>
+                    <p>東歐電壓主要為 <strong>220 伏特</strong>，插座為雙圓孔（內凹式插座），建議攜帶萬國轉接頭與變壓器。</p>
+                </div>
+                <div class="fact-card card glass">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    <h4>夏令/冬令時差</h4>
+                    <p>夏令時間比台灣<strong>慢 6 小時</strong>（3月至10月）；冬令時間比台灣<strong>慢 7 小時</strong>（11月至2月）。</p>
+                </div>
+                <div class="fact-card card glass">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h4>服務費與小費</h4>
+                    <p>司機、導遊、領隊服務費綜合以每日 <strong>12 歐元</strong>計。床頭小費一般以每日 1 歐元為原則。</p>
+                </div>
+                <div class="fact-card card glass">
+                    <i class="fa-solid fa-restroom"></i>
+                    <h4>公共洗手間</h4>
+                    <p>歐洲大部分公共洗手間為收費制，每次使用需自備 <strong>0.5 至 1 歐元</strong> 零錢。</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title"><i class="fa-solid fa-phone"></i> 駐東歐代表處緊急聯絡網</h3>
+            <div class="embassy-grid" id="embassy-grid">
+                <!-- Embassy cards loaded by JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Glassmorphic Modal for Attraction Details -->
+    <div class="modal-overlay" id="story-modal">
+        <div class="modal-card glass">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-header">
+                <span class="modal-country-badge" id="modal-country">奧地利</span>
+                <h2 id="modal-title">景點名稱</h2>
+                <p class="modal-hierarchy" id="modal-hierarchy">國家 ──> 城市 ──> 景點</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" data-tab="tab-intro">景點深度介紹</button>
+                    <button class="modal-tab-btn" data-tab="tab-legend"><i class="fa-solid fa-sparkles"></i> 歷史趣聞與傳說故事</button>
+                </div>
+                <div class="modal-tab-content active" id="tab-intro">
+                    <p id="modal-intro-text">詳細介紹載入中...</p>
+                </div>
+                <div class="modal-tab-content" id="tab-legend">
+                    <p id="modal-legend-text">傳說故事載入中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2026 東歐之耀 12 日旅行指南 ── 網頁由 Antigravity 團隊精心打造</p>
+            <p class="footer-note">請帶上一顆入境隨俗的心，可以更享受異國風情喔！祝您旅途愉快！</p>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
